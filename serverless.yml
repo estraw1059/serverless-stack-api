@@ -62,10 +62,10 @@ functions:
     handler: get.main
     events:
       - http:
-        path: notes/{id}
-        method: get
-        cors: true
-        authorizer: aws_iam
+          path: notes/{id}
+          method: get
+          cors: true
+          authorizer: aws_iam
 
   list:
     #Submit user ID get full list of notes
@@ -78,7 +78,6 @@ functions:
           authorizer: aws_iam
 
   update:
-
     handler: update.main
     events:
       - http:
@@ -91,18 +90,18 @@ functions:
     handler: delete.main
     events:
       - http:
-        path: notes/{id}
-        method: delete
-        cors: true
-        authorizer: aws_iam
+          path: notes/{id}
+          method: delete
+          cors: true
+          authorizer: aws_iam
 
   billing:
     handler: billing.main
     events:
       - http:
-        path: billing
-        method: post
-        cors: true
-        authorizer: aws_iam
+          path: billing
+          method: post
+          cors: true
+          authorizer: aws_iam
 
 
